@@ -27,64 +27,163 @@
     <title>React App</title>
   </head>
   <body>
-    <select>
-        <option>Gradebook</option>
-    </select>
-    <button>Import</button>
-    <select>
-        <option>Export</option>
-    </select>
-    <button>Configure</button>
-    
-    <h2>Student Names</h2>
-    <input type="text" id="grades-student-search" placeholder="Search Students"/>
-    <h2>Assignment Names</h2>
-    <input type="text" id="grades-assignment-search" placeholder="Search Assignments"/>
-    <br>
-    <br>
-    <button>Apply Filters</button>
-    <br>
-    <br>
     <table border="1">
-        <thead>
-            <tr>
-                <th>Student Name</th>
-                <th>A1 SETUP Out of 100</th>
-                <th>A2 HTML Out of 100</th>
-                <th>A3 CSS Out of 100</th>
-                <th>A4 BOOTSTRAP</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>BeepBoop BopBop</td>
-                <td>80</td>
-                <td>90</td>
-                <td>84</td>
-                <td>92</td>
-            </tr>
-            <tr>
-                <td>Joe Schmoe</td>
-                <td>65</td>
-                <td>44</td>
-                <td>75</td>
-                <td>72</td>
-            </tr>
-            <tr>
-                <td>Jose Annunziato</td>
-                <td>100</td>
-                <td>100</td>
-                <td><input type="number" value="100" min="0" max="100"></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>Bob The Builder</td>
-                <td><input type="number" value="35" min="0" max="100"></td>
-                <td>88</td>
-                <td>97</td>
-                <td>91</td>
-            </tr>
-        </tbody>
-    </table>
+      <tr>
+          <td valign="top">
+              <ul>
+                  <li>
+                      <a href="#">Northeastern</a>
+                  </li>
+                  <li>
+                      <a href="/kanbas/account.html">Account</a>
+                  </li>
+                  <li>
+                      <a href="#">Dashboard</a>
+                  </li>
+                  <li>
+                      <a href="/kanbas/home.html">Courses</a>
+                  </li>
+                  <li>
+                      <a href="#">Groups</a>
+                  </li>
+                  <li>
+                      <a href="#">Calendar</a>
+                  </li>
+                  <li>
+                      <a href="#">Inbox</a>
+                  </li>
+                  <li>
+                      <a href="#">History</a>
+                  </li>
+                  <li>
+                      <a href="#">Studio</a>
+                  </li>
+                  <li>
+                      <a href="#">Help</a>
+                  </li>
+              </ul>
+          </td>
+          <td valign="top">
+              <ul>
+                  <li>
+                      <a href="/kanbas/home.html">Home</a>
+                  </li>
+                  <li>
+                      <a href="#">Modules</a>
+                  </li>
+                  <li>
+                      <a href="#">Piazza</a>
+                  </li>
+                  <li>
+                      <a href="#">Zoom Meetings</a>
+                  </li>
+                  <li>
+                      <a href="/kanbas/assignments/index.html">Assignments</a>
+                  </li>
+                  <li>
+                      <a href="#">Quizzes</a>
+                  </li>
+                  <li>
+                      <a href="/kanbas/grades.html">Grades</a>
+                  </li>
+                  <li>
+                      <a href="#">People</a>
+                  </li>
+                  <li>
+                      <a href="#">Panopto Video</a>
+                  </li>
+                  <li>
+                      <a href="#">Discussions</a>
+                  </li>
+                  <li>
+                      <a href="#">Announcements</a>
+                  </li>
+                  <li>
+                      <a href="#">Pages</a>
+                  </li>
+                  <li>
+                      <a href="#">Files</a>
+                  </li>
+                  <li>
+                      <a href="#">Rubrics</a>
+                  </li>
+                  <li>
+                      <a href="#">Outcomes</a>
+                  </li>
+                  <li>
+                      <a href="#">Collaborations</a>
+                  </li>
+                  <li>
+                      <a href="#">Syllabus</a>
+                  </li>
+                  <li>
+                      <a href="#">Settings</a>
+                  </li>
+              </ul>            
+          </td>
+          <td valign="top">
+  
+              <select>
+                  <option>Gradebook</option>
+              </select>
+              <button>Import</button>
+              <select>
+                  <option>Export</option>
+              </select>
+              <button>Configure</button>
+              
+              <h2>Student Names</h2>
+              <input type="text" id="grades-student-search" placeholder="Search Students"/>
+              <h2>Assignment Names</h2>
+              <input type="text" id="grades-assignment-search" placeholder="Search Assignments"/>
+              <br>
+              <br>
+              <button>Apply Filters</button>
+              <br>
+              <br>
+              <table border="1">
+                  <thead>
+                      <tr>
+                          <th>Student Name</th>
+                          <th>A1 SETUP Out of 100</th>
+                          <th>A2 HTML Out of 100</th>
+                          <th>A3 CSS Out of 100</th>
+                          <th>A4 BOOTSTRAP</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>BeepBoop BopBop</td>
+                          <td>80</td>
+                          <td>90</td>
+                          <td>84</td>
+                          <td>92</td>
+                      </tr>
+                      <tr>
+                          <td>Joe Schmoe</td>
+                          <td>65</td>
+                          <td>44</td>
+                          <td>75</td>
+                          <td>72</td>
+                      </tr>
+                      <tr>
+                          <td>Jose Annunziato</td>
+                          <td>100</td>
+                          <td>100</td>
+                          <td><input type="number" value="100" min="0" max="100"></td>
+                          <td>100</td>
+                      </tr>
+                      <tr>
+                          <td>Bob The Builder</td>
+                          <td><input type="number" value="35" min="0" max="100"></td>
+                          <td>88</td>
+                          <td>97</td>
+                          <td>91</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+  </table>
   </body>
 </html>
