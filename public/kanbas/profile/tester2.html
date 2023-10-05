@@ -136,127 +136,104 @@
               </div>
               <div class="col">
                 <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <btn
-                        class="btn kanbas-grade-button float-end"
-                        type="submit"
-                        ><i class="fa-solid fa-gear no-padding"></i
-                      ></btn>
-
-                      <btn
-                        class="btn kanbas-grade-button float-end"
-                        type="submit"
-                        ><i class="fa-solid fa-file-export"></i>Export</btn
-                      >
-                      <btn
-                        class="btn kanbas-grade-button float-end"
-                        type="submit"
-                        ><i class="fa-solid fa-file-import"></i>Import</btn
-                      >
-                    </div>
-                  </div>
-                  <div class="row fw-bold">
-                    <div class="col">
-                      <p>Student Names</p>
-                    </div>
-                    <div class="col">
-                      <p>Assignment Names</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"
-                          ><i class="fa-solid fa-magnifying-glass"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Search Students"
-                        />
+                    <div class="row">
+                      <div class="col">
+                        <div class="row">
+                          <div class="col">
+                            <p>
+                              <i class="fa-solid fa-user fa-10x"></i>
+                            </p>
+                            <p class="fw-bold">Name:*</p>
+                            <div class="input-group mb-3 fixed-width-250">
+                              <input type="text" class="form-control" />
+                            </div>
+                            <p class="fw-bold">Pronouns:</p>
+                            <div class="dropdown mb-3">
+                              <button
+                                class="btn border bg-white dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Pronouns
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Pronouns</a></li>
+                              </ul>
+                            </div>
+              
+                            <p class="fw-bold">Title:</p>
+                            <div class="input-group mb-5 fixed-width-250">
+                              <input type="text" class="form-control" />
+                            </div>
+              
+                            <h3 class="mb-2">Contact</h3>
+                            <p class="mb-4">
+                              No registered services, you can add some on the
+                              <a href="#" class="kanbas-nav-link">settings</a> page.
+                            </p>
+              
+                            <h3 class="mb-2 ">Biography</h3>
+                            <div class="input-group fixed-width-250">
+                              <textarea class="form-control" value="">
+              Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea
+                              >
+                            </div>
+                            <p class="mb-4"></p>
+              
+                            <h3 class="mb-2">Links</h3>
+                            <div class="container fixed-width-250 mx-0 p-0">
+                              <div class="row">
+                                  <div class="col">
+                                      <p class="fw-bold">Title</p>
+                                  </div>
+                                  <div class="col">
+                                      <p class="fw-bold">URL</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col fixed-width-125">
+                                      <div class="input-group mb-5">
+                                          <input type="text" class="form-control" value="YouTube"/>
+                                        </div>
+                                  </div>
+                                  <div class="col fixed-width-125">
+                                      <div class="input-group mb-5">
+                                          <input type="text" class="form-control" value="https://www.youtube.com/" />
+                                        </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <button class="btn kanbas-grade-button">Add another link</button>
+                              </div>
+                              <hr>
+                              <div class="container">
+                                  <div class="row">
+                                      <div class="col fixed-width-100 pe-0">
+                                          <button class="btn kanbas-grade-button">
+                                              Cancel
+                                          </button>
+                                      </div>
+                                      <div class="col fixed-width-175 px-0 ">
+                                          <button class="btn save-profile-button">
+                                              Save Profile
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 fixed-width-175">
+                        <a
+                          href="http://localhost:3000/kanbas/profile/index.html"
+                          class="btn kanbas-grade-button"
+                          ><i class="fa-solid fa-pencil"></i>Cancel Editing
+                        </a>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"
-                          ><i class="fa-solid fa-magnifying-glass"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Search Assignments"
-                        />
-                      </div>
-                    </div>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                      <btn class="btn kanbas-grade-button" type="submit"
-                        ><i class="fa-solid fa-filter"></i>Apply Filters</btn
-                      >
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <table class="table table-striped table-bordered">
-                        <thead class="table-light">
-                          <tr>
-                            <th>Student Name</th>
-                            <th>A1 SETUP Out of 100</th>
-                            <th>A2 HTML Out of 100</th>
-                            <th>A3 CSS Out of 100</th>
-                            <th>A4 BOOTSTRAP</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="text-danger">BeepBoop BopBop</td>
-                            <td>80</td>
-                            <td>90</td>
-                            <td>84</td>
-                            <td>92</td>
-                          </tr>
-                          <tr>
-                            <td class="text-danger">Joe Schmoe</td>
-                            <td>65</td>
-                            <td>44</td>
-                            <td>75</td>
-                            <td>72</td>
-                          </tr>
-                          <tr>
-                            <td class="text-danger">Jose Annunziato</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>
-                              <input
-                                type="number"
-                                value="100"
-                                min="0"
-                                max="100"
-                              />
-                            </td>
-                            <td>100</td>
-                          </tr>
-                          <tr>
-                            <td class="text-danger">Bob The Builder</td>
-                            <td>
-                              <input
-                                type="number"
-                                value="35"
-                                min="0"
-                                max="100"
-                              />
-                            </td>
-                            <td>88</td>
-                            <td>97</td>
-                            <td>91</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
