@@ -14,15 +14,16 @@
     <link href="/kanbas/index.css" rel="stylesheet" />
   </head>
   <body class="wd-kanbas">
-    <table class="wd-kanbas">
-      <tr>
-        <td valign="baseline" class="bg-black wd-kanbas-navigation">
+    <div class="container">
+      <div class="row m-0 fill-row">
+        <div
+          class="col-md-3 bg-black wd-kanbas-navigation d-none d-md-block justify-content-center"
+        >
           <a href="#">
             <img
               src="https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png"
             />
           </a>
-
           <ul class="wd-kanbas-navigation list-group">
             <a href="/kanbas/account.html">
               <li class="list-group-item active">
@@ -32,35 +33,30 @@
                 <p>Account</p>
               </li>
             </a>
-
-            <a href="#">
+            <a href="/kanbas/dashboard.html">
               <li class="list-group-item">
                 <span> <i class="fa-solid fa-gauge fa-2xl"></i></span>
                 <p>Dashboard</p>
               </li>
             </a>
-
             <a href="/kanbas/home.html">
               <li class="list-group-item">
                 <span> <i class="fa-solid fa-book fa-2xl"></i> </span>
                 <p>Courses</p>
-              </li></a
-            >
+              </li>
+            </a>
             <a href="#">
               <li class="list-group-item">
                 <span><i class="fa-solid fa-people-group fa-2xl"></i></span>
                 <p>Groups</p>
               </li>
             </a>
-
             <a href="#">
               <li class="list-group-item">
                 <span><i class="fa-regular fa-calendar fa-2xl"></i></span>
                 <p>Calendar</p>
-                S
               </li>
             </a>
-
             <a href="#">
               <li class="list-group-item">
                 <span><i class="fa-solid fa-inbox fa-2xl"></i></span>
@@ -86,36 +82,53 @@
               </li>
             </a>
           </ul>
-        </td>
-        <td valign="top">
-            <ul class="wd-course-navigation list-group">
-              <li class="list-group-item">
-                <a href="#">Notifications</a>
-              </li>
-              <li class="list-group-item">
-                <a href="/kanbas/profile/index.html">Profile</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">Settings</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">ePortfolios</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">Shared Content</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">The Hub</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">Qwickly Course Tools</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">Global Announcements</a>
-              </li>
-            </ul>
-          </td>
-      </tr>
-    </table>
+        </div>
+        <div class="col">
+          <div class="container-fluid">
+            <div class="row mt-3">
+              <div class="col d-flex mb-0">
+                <i class="fa-solid fa-bars m-1 text-danger me-3"></i>
+                <p class=fw-medium">Account Navigation</p>
+              </div>
+
+              <hr />
+            </div>
+            <div class="row">
+              <div class="col-sm-2 d-none d-md-block wd-course-navigation">
+                <ul class="wd-course-navigation list-group">
+                  <li class="list-group-item">
+                    <a href="#">Notifications</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="/kanbas/profile/index.html">Profile</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">Files</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">Settings</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">ePortfolios</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">Shared Content</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">The Hub</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">Qwickly Course Tools</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">Global Announcements</a>s
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
