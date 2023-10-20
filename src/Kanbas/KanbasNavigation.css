@@ -1,0 +1,57 @@
+.wd-kanbas-navigation {
+  width: 85px;
+  font-size: 14px;
+  background-color: black;
+  padding: 0;
+  height: 100%;
+}
+
+.kanbas-navigation-thumbnail img {
+  width: 85px;
+  height: 85px;
+  background-color: black;
+}
+
+.wd-kanbas-navigation .list-group-item {
+  border: none;
+  color: white;
+  background-color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  height: 65px;
+}
+
+.wd-kanbas-navigation .list-group-item.active {
+  background-color: white;
+}
+
+.wd-kanbas-navigation .list-group-item p {
+  margin: 0;
+}
+
+.wd-kanbas-navigation .list-group-item.active {
+  color: #d41b2c;
+}
+
+.wd-kanbas-navigation a {
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.wd-kanbas-navigation img {
+  width: 85px;
+  height: 85px;
+}
+
+.grey-icon {
+    color:grey;
+}
+
+svg {
+    color:#d41b2c
+}
