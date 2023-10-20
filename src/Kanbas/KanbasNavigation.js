@@ -27,9 +27,9 @@ function KanbasNavigation() {
   return (
     <div class="d-none d-md-block justify-content-center">
       <div class="kanbas-navigation-thumbnail">
-        <a href="#">
+        <Link to={`/Kanbas/Dashboard`}>
           <img src="https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png" />
-        </a>
+        </Link>
       </div>
       <IconContext.Provider value={{ size: 30 }}>
         <div className="wd-kanbas-navigation">

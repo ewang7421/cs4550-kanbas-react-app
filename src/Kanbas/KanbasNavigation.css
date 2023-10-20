@@ -36,18 +36,6 @@
   color: #d41b2c;
 }
 
-.wd-kanbas-navigation a {
-  border: none;
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-.wd-kanbas-navigation img {
-  width: 85px;
-  height: 85px;
-}
-
 .grey-icon {
     color:grey;
 }
