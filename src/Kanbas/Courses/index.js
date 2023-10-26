@@ -1,12 +1,23 @@
 import db from "../../Kanbas/Database";
 import { useParams, Navigate, Route, Routes } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css";
 import CourseNavigation from "./CourseNavigation";
+import Modules from "./Modules";
+import { useLocation } from "react-router-dom";
 
 function Courses() {
-  const { courseId } = useParams();
+  const { courseId, link } = useParams();
   const course = db.courses.find((course) => course._id === courseId);
+
+  const {pathName} = useLocation();
+  console.log("pathname: " + Location.pathname);
+  const breadcrumbItems = () => {
+    let result = [course.name]
+    return result;
+  }
   return (
     <div class="col">
       <div class="container-fluid">
@@ -16,6 +27,7 @@ function Courses() {
             <nav aria-label="breadcrumb" className="kanbas-breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item kanbas-red">{course.name}</li>
+                {breadcrumbItems}
               </ol>
             </nav>
           </div>
@@ -25,17 +37,12 @@ function Courses() {
           <div class="col col-sm-2 d-none d-md-block">
             <CourseNavigation />
           </div>
-          <div
-            className="overflow-y-scroll position-fixed bottom-0 end-0"
-            style={{
-              left: "320px",
-              top: "100px",
-            }}
+          <div class="col"
           >
             <Routes>
               <Route path="/" element={<Navigate to="Home" />} />
               <Route path="Home" element={<h1>Home</h1>} />
-              <Route path="Modules" element={<h1>Modules</h1>} />
+              <Route path="Modules" element={<Modules/>} />
               <Route path="Assignments" element={<h1>Assignments</h1>} />
               <Route
                 path="Assignments/:assignmentId"
