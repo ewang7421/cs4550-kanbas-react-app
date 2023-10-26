@@ -9,11 +9,10 @@ import Modules from "./Modules";
 import { useLocation } from "react-router-dom";
 
 function Courses() {
-  const { courseId, link } = useParams();
+  const { courseId } = useParams();
+  const location = useLocation();
+  console.log("Current Location:", location.pathname);
   const course = db.courses.find((course) => course._id === courseId);
-
-  const {pathName} = useLocation();
-  console.log("pathname: " + Location.pathname);
   const breadcrumbItems = () => {
     let result = [course.name]
     return result;
