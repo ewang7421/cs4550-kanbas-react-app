@@ -13,7 +13,7 @@ import { PiMonitorPlay } from "react-icons/pi";
 
 function KanbasNavigation() {
   const links = [
-    { name: "Account", icon: <VscAccount class="grey-icon" /> },
+    { name: "Account", icon: <VscAccount className="grey-icon" /> },
     { name: "Dashboard", icon: <BsSpeedometer2 /> },
     { name: "Courses", icon: <RiBook2Line /> },
     { name: "Groups", icon: <BiGroup /> },
@@ -25,8 +25,8 @@ function KanbasNavigation() {
   ];
   const { pathname } = useLocation();
   return (
-    <div class="d-none d-md-block justify-content-center">
-      <div class="kanbas-navigation-thumbnail">
+    <div className="d-none d-md-block justify-content-center ">
+      <div className="kanbas-navigation-thumbnail">
         <Link to={`/Kanbas/Dashboard`}>
           <img src="https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png" />
         </Link>
@@ -38,7 +38,7 @@ function KanbasNavigation() {
               key={index}
               to={`/Kanbas/${link.name}`}
               className={`list-group-item ${
-                pathname.includes(link) && "active"
+                pathname.includes(link.name) && "active"
               }`}
             >
               {link.icon}
