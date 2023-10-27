@@ -32,7 +32,7 @@ function Dashboard() {
                 />
                 <Link
                   key={course._id}
-                  to={`/Kanbas/Courses/${course._id}/home`}
+                  to={`/Kanbas/Courses/${course._id}/Home`}
                   className="list-group-item"
                 >
                   <div className="card-body">

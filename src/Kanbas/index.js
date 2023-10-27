@@ -15,12 +15,13 @@ function Kanbas() {
       <div className="row h-100">
         <div className="d-flex container-fluid">
           <KanbasNavigation />
-          <div className= "container-fluid">
+          <div className="container-fluid">
             <Routes>
               <Route path="/" element={<Navigate to="Dashboard" />} />
               <Route path="Account" element={<h1>Account</h1>} />
               <Route path="Dashboard" element={<Dashboard />} />
-              <Route path="Courses/:courseId/*" element={<Courses/>} />
+              <Route path="Courses/:courseId/*" element={<Courses />} />
+              <Route path="Grades" element={<h1>Grades</h1>} />
             </Routes>
           </div>
         </div>

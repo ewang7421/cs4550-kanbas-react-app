@@ -1,0 +1,20 @@
+.breadcrumb-link {
+  color: #d41b2c;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-link-current {
+    color: #2D3B45;
+    text-decoration: none;
+}
+.breadcrumb-link-current:hover {
+    text-decoration: underline;
+}
+
+nav.kanbas-breadcrumb {
+  --bs-breadcrumb-divider: ">";
+}
