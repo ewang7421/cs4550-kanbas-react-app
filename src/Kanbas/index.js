@@ -7,7 +7,7 @@ import Courses from "./Courses";
 function Kanbas() {
   return (
     <div className="container-fluid h-100 mx-0 px-0">
-      <div className="row mt-2">
+      <div className="row">
         <div className="col">
           <Nav />
         </div>
