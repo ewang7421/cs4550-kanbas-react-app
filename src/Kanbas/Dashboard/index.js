@@ -1,9 +1,21 @@
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import db from "../Database";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-function Dashboard() {
-  const courses = db.courses;
+import db from "../Database";
+function Dashboard({
+  courses,
+  course,
+  setCourse,
+  addNewCourse,
+  deleteCourse,
+  updateCourse,
+}) {
+  const [showEditor, setShowEditor] = useState(false);
+  const toggleEditor = () => {
+    setShowEditor(!showEditor);
+  };
+
   return (
     <div>
       <div className="container-fluid">
@@ -13,14 +25,65 @@ function Dashboard() {
             <hr />
           </div>
         </div>
-        <div className="row">
-          <div className="col">
-            <h3 className="fw-medium">Published Courses (24)</h3>
-            <hr />
+        <div className="row ">
+          <div className="col d-flex mb-3">
+            <h3 className="fw-medium">Published Courses ({courses.length})</h3>
+            <button
+              onClick={toggleEditor}
+              className={`${"btn btn-warning ms-auto"} ${
+                !showEditor ? "" : "d-none"
+              }`}
+            >
+              Edit
+            </button>
+
+            <button
+              onClick={toggleEditor}
+              className={`${"btn btn-success ms-auto"} ${
+                showEditor ? "" : "d-none"
+              }`}
+            >
+              Done
+            </button>
           </div>
+          <hr />
         </div>
       </div>
       <div className="container mx-0">
+        <div className={showEditor ? "" : "d-none"}>
+          <button className="btn btn-success" onClick={addNewCourse}>
+            Add
+          </button>
+          <button className="btn btn-primary" onClick={updateCourse}>
+            Update
+          </button>
+
+          <h5>Course</h5>
+          <input
+            value={course.name}
+            className="form-control"
+            onChange={(e) => setCourse({ ...course, name: e.target.value })}
+          />
+          <input
+            value={course.number}
+            className="form-control"
+            onChange={(e) => setCourse({ ...course, number: e.target.value })}
+          />
+          <input
+            value={course.startDate}
+            className="form-control"
+            type="date"
+            onChange={(e) =>
+              setCourse({ ...course, startDate: e.target.value })
+            }
+          />
+          <input
+            value={course.endDate}
+            className="form-control"
+            type="date"
+            onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
+          />
+        </div>
         <div className="d-flex flex-row flex-wrap row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
           {courses.map((course) => (
             <div className="col">
@@ -37,12 +100,34 @@ function Dashboard() {
                 >
                   <div className="card-body">
                     <h5 className="card-title">{course.name}</h5>
-                    <p className="card-text mb-0">{course._id}</p>
+                    <p className="card-text mb-0">{course.number}</p>
                     <p className="card-text">
                       {course.startDate} to {course.endDate}
                     </p>
                   </div>
                 </Link>
+                <button
+                  className={`${"btn btn-warning card-edit"} ${
+                    showEditor ? "" : "d-none"
+                  }`}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setCourse(course);
+                  }}
+                >
+                  Edit
+                </button>
+                <button
+                  className={`${"btn btn-danger card-delete"} ${
+                    showEditor ? "" : "d-none"
+                  }`}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    deleteCourse(course._id);
+                  }}
+                >
+                  Delete
+                </button>
               </div>
             </div>
           ))}

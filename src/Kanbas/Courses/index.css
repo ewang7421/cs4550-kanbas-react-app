@@ -1,20 +1,7 @@
-nav.kanbas-breadcrumb {
-  --bs-breadcrumb-divider: ">";
-}
-
 .kanbas-red {
   color: #d41b2c;
 }
 
 .fixed-width-195 {
   width: 195px;
-}
-
-.breadcrumb-link {
-  color: #d41b2c;
-  text-decoration: none;
-}
-
-.breadcrumb-link:hover {
-  text-decoration:underline;
 }

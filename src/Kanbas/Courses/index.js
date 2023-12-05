@@ -1,7 +1,4 @@
-import db from "../../Kanbas/Database";
-import { useParams, Navigate, Route, Routes, Link } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
-
+import { Navigate, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import CourseNavigation from "./CourseNavigation";
@@ -11,20 +8,20 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import Breadcrumb from "./Breadcrumb";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import { useParams } from "react-router-dom";
 
-function Courses() {
-  const { courseId } = useParams();
+function Courses({ courses }) {
   const location = useLocation();
   const breadcrumbItems = location.pathname
     .split("/")
-    .filter((item, index) => index > 3);
-  console.log(breadcrumbItems);
-  const course = db.courses.find((course) => course._id === courseId);
+    .filter((index) => index > 3);
+  const { courseId } = useParams();
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className="col">
       <div className="container-fluid">
         <div className="row mt-3">
-          <Breadcrumb/>
+          <Breadcrumb />
           <hr />
         </div>
         <div className="row">
@@ -39,7 +36,7 @@ function Courses() {
               <Route path="Assignments" element={<Assignments />} />
               <Route
                 path="Assignments/:assignmentId"
-                element={<AssignmentEditor/>}
+                element={<AssignmentEditor />}
               />
               <Route path="Grades" element={<h1>Grades</h1>} />
             </Routes>
