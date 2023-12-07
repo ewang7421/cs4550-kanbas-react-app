@@ -51,10 +51,10 @@ function Dashboard({
       </div>
       <div className="container mx-0">
         <div className={showEditor ? "" : "d-none"}>
-          <button className="btn btn-success" onClick={addNewCourse}>
+          <button className="btn btn-success" onClick={() => addNewCourse(course)}>
             Add
           </button>
-          <button className="btn btn-primary" onClick={updateCourse}>
+          <button className="btn btn-primary" onClick={() => updateCourse(course)}>
             Update
           </button>
 
