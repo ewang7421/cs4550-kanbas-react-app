@@ -9,19 +9,29 @@ import Assignments from "./Assignments";
 import Breadcrumb from "./Breadcrumb";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({ courses }) {
-  const location = useLocation();
-  const breadcrumbItems = location.pathname
-    .split("/")
-    .filter((index) => index > 3);
+function Courses() {
+  const URL = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState({});
+
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+
+    console.log(course);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <div className="col">
       <div className="container-fluid">
         <div className="row mt-3">
-          <Breadcrumb />
+          <Breadcrumb course={course} />
           <hr />
         </div>
         <div className="row">

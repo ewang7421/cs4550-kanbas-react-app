@@ -6,14 +6,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { useLocation } from "react-router-dom";
 
-function Breadcrumb() {
+function Breadcrumb({ course }) {
   const { courseId } = useParams();
   const location = useLocation();
   let breadcrumbItems = location.pathname.split("/");
   if (location.pathname.includes("Courses")) {
     const removeIndex = breadcrumbItems.findIndex((a) => a === "Courses");
     breadcrumbItems = breadcrumbItems.slice(3);
-    console.log(breadcrumbItems);
     if (
       breadcrumbItems.includes("Assignments") &&
       breadcrumbItems.length >
@@ -26,8 +25,6 @@ function Breadcrumb() {
       ).title;
     }
   }
-  console.log(breadcrumbItems);
-  const course = db.courses.find((course) => course._id === courseId);
 
   return (
     <div className="col d-flex">
@@ -47,7 +44,7 @@ function Breadcrumb() {
                     : "breadcrumb-link"
                 }
               >
-                {item}
+                {index == 0 ? course.name : item}
               </Link>
             </li>
           ))}
