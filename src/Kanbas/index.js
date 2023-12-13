@@ -4,10 +4,11 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import { Provider } from "react-redux";
-import db from "./Database";
 import { useState, useEffect } from "react";
 import store from "./store";
 import axios from "axios";
+import Signin from "./Users/signin";
+import Account from "./Users/account";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
@@ -18,7 +19,8 @@ function Kanbas() {
     startDate: "2023-09-10",
     endDate: "2023-12-15",
   });
-  const URL = "http://localhost:4000/api/courses";
+  const URL =
+    "https://kanbas-node-server-app-ewang-3f6d180f75ea.herokuapp.com/api/courses";
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
@@ -97,7 +99,7 @@ function Kanbas() {
                   path="Courses/:courseId/*"
                   element={<Courses courses={courses} />}
                 />
-                <Route path="Grades" element={<h1>Grades</h1>} />
+                <Route path="Grades" element={<h1>Grades</h1>} />{" "}
               </Routes>
             </div>
           </div>

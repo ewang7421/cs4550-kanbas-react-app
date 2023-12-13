@@ -51,7 +51,7 @@ function WorkingWithArrays() {
     setTodo({});
   };
 
-  const API = "http://localhost:4000/a5/todos";
+  const API = "https://kanbas-node-server-app-ewang-3f6d180f75ea.herokuapp.com/a5/todos";
   return (
     <div>
       <h3>Working with Arrays</h3>

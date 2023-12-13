@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Courses() {
-  const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-node-server-app-ewang-3f6d180f75ea.herokuapp.com/api/courses";
   const [course, setCourse] = useState({});
 
   const { courseId } = useParams();

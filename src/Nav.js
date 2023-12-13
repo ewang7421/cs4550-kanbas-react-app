@@ -35,6 +35,18 @@ function Nav() {
       >
         Kanbas
       </Link>
+      <Link
+        to="/Signin"
+        className={`nav-link ${pathname.includes("Signin") ? "active" : ""}`}
+      >
+        Signin
+      </Link>
+      <Link
+        to="/Account"
+        className={`nav-link ${pathname.includes("Account") ? "active" : ""}`}
+      >
+        Account
+      </Link>
     </nav>
   );
 }
